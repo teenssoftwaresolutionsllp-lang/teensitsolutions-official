@@ -1,138 +1,103 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import type { PageData } from "@/lib/pages";
 
 interface PageRendererProps {
-  pageData: PageData;
+  bodyHtml: string;
+  bodyClass: string;
 }
 
-export default function PageRenderer({ pageData }: PageRendererProps) {
+export default function PageRenderer({ bodyHtml, bodyClass }: PageRendererProps) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const scriptsRan = useRef(false);
 
   useEffect(() => {
-    // 1. Update body class
-    if (pageData.bodyClass) {
-      document.body.className = pageData.bodyClass;
-    } else {
-      document.body.removeAttribute("class");
+    // 1. Set body class
+    if (bodyClass) {
+      document.body.className = bodyClass;
     }
 
-    // 2. Inject page-specific head styles and scripts
-    const injectedHeadElements: HTMLElement[] = [];
-    if (pageData.headStyles && pageData.headStyles.length > 0) {
-      for (const styleStr of pageData.headStyles) {
-        const tempDiv = document.createElement("div");
-        tempDiv.innerHTML = styleStr;
-        const el = tempDiv.firstChild as HTMLElement;
-        if (!el) continue;
-
-        const id = el.getAttribute("id");
-        const href = el.getAttribute("href");
-        const src = el.getAttribute("src");
-
-        // Avoid duplicates
-        if (id && document.getElementById(id)) continue;
-        if (href && document.querySelector(`link[href="${href}"]`)) continue;
-        if (src && document.querySelector(`script[src="${src}"]`)) continue;
-
-        el.setAttribute("data-page-injected", "true");
-        document.head.appendChild(el);
-        injectedHeadElements.push(el);
-
-        // If it's a head script, we want to execute it if it's inline
-        if (el.tagName === "SCRIPT" && !src && el.innerHTML) {
-          try {
-            const inlineScript = document.createElement("script");
-            inlineScript.text = el.innerHTML;
-            document.head.appendChild(inlineScript);
-            injectedHeadElements.push(inlineScript);
-          } catch (e) {
-            console.warn("Error running head inline script:", e);
-          }
-        }
-      }
-    }
-
-    // 3. Sequential script execution for body scripts
-    const container = containerRef.current;
-    if (container) {
-      const runBodyScripts = async () => {
-        const scripts = container.getElementsByTagName("script");
-        const scriptsArray = Array.from(scripts);
-
-        for (const oldScript of scriptsArray) {
-          await new Promise<void>((resolve) => {
-            const newScript = document.createElement("script");
-
-            // Copy all attributes
-            for (let i = 0; i < oldScript.attributes.length; i++) {
-              const attr = oldScript.attributes[i];
-              newScript.setAttribute(attr.name, attr.value);
-            }
-
-            // Copy content
-            if (oldScript.innerHTML) {
-              newScript.innerHTML = oldScript.innerHTML;
-            }
-
-            // Replace script to execute it
-            if (oldScript.parentNode) {
-              oldScript.parentNode.replaceChild(newScript, oldScript);
-            }
-
-            if (newScript.src) {
-              newScript.onload = () => resolve();
-              newScript.onerror = () => resolve();
-            } else {
-              // Wait brief moment for inline scripts to parse
-              setTimeout(() => resolve(), 5);
-            }
-          });
-        }
-
-        // 4. Trigger jQuery events once all scripts have run
-        if (typeof window !== "undefined" && (window as any).jQuery) {
-          const $ = (window as any).jQuery;
-          try {
-            $(window).trigger("load");
-            $(document).trigger("ready");
-            $(window).trigger("resize");
-            $(window).trigger("scroll");
-            $(".ct-loader").fadeOut("fast");
-            $(".ct-page-loading-bg").fadeOut("fast");
-            $("#ct-loadding").fadeOut("fast");
-          } catch (e) {
-            console.warn("jQuery trigger warning:", e);
-          }
-        }
-
-        // Fallback: hide preloader directly
-        const loader = document.getElementById("ct-loadding");
-        if (loader) loader.style.display = "none";
-        const ctLoader = document.querySelector(".ct-loader") as HTMLElement | null;
-        if (ctLoader) ctLoader.style.display = "none";
-      };
-
-      // Run scripts after page content is in DOM
-      setTimeout(() => {
-        runBodyScripts();
-      }, 50);
-    }
-
-    return () => {
-      // Cleanup head elements
-      injectedHeadElements.forEach((el) => {
-        if (el.parentNode) el.parentNode.removeChild(el);
+    // 2. Hide preloader immediately
+    const hidePreloader = () => {
+      const ids = ["ct-loadding", "ct-preloader"];
+      const classes = [".ct-loader", ".ct-page-loading-bg", ".preloader"];
+      ids.forEach((id) => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = "none";
+      });
+      classes.forEach((cls) => {
+        const el = document.querySelector(cls) as HTMLElement;
+        if (el) el.style.display = "none";
       });
     };
-  }, [pageData]);
+    hidePreloader();
+
+    // 3. Execute body scripts sequentially
+    if (scriptsRan.current) return;
+    scriptsRan.current = true;
+
+    const container = containerRef.current;
+    if (!container) return;
+
+    const runScripts = async () => {
+      await (window as any).__headAssetsReady;
+      const scripts = Array.from(container.getElementsByTagName("script"));
+
+      for (const oldScript of scripts) {
+        await new Promise<void>((resolve) => {
+          const newScript = document.createElement("script");
+
+          // Copy attributes
+          for (const attr of Array.from(oldScript.attributes)) {
+            newScript.setAttribute(attr.name, attr.value);
+          }
+
+          // Copy inline content
+          if (oldScript.innerHTML) {
+            newScript.innerHTML = oldScript.innerHTML;
+          }
+
+          if (oldScript.parentNode) {
+            oldScript.parentNode.replaceChild(newScript, oldScript);
+          }
+
+          if (newScript.src) {
+            newScript.onload = () => resolve();
+            newScript.onerror = () => resolve();
+          } else {
+            resolve();
+          }
+        });
+      }
+
+      // Trigger jQuery events
+      if ((window as any).jQuery) {
+        const $ = (window as any).jQuery;
+        try {
+          $(window).trigger("load");
+          $(document).trigger("ready");
+          $(window).trigger("resize");
+          $(window).trigger("scroll");
+        } catch (e) {
+          // silent
+        }
+      }
+
+      hidePreloader();
+    };
+
+    // Small delay to let the DOM settle
+    requestAnimationFrame(() => {
+      runScripts();
+    });
+  }, [bodyHtml, bodyClass]);
 
   return (
     <div
       ref={containerRef}
       id="page-content-wrapper"
-      dangerouslySetInnerHTML={{ __html: pageData.bodyHtml }}
+      suppressHydrationWarning
+      dangerouslySetInnerHTML={{ __html: bodyHtml }}
     />
   );
 }

@@ -31,8 +31,8 @@ export default function RootLayout({
         />
 
         {/* Global Core Libraries */}
-        <Script src="/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" strategy="beforeInteractive" />
-        <Script src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" strategy="beforeInteractive" />
+        <Script id="jquery-core-js" src="/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" strategy="beforeInteractive" />
+        <Script id="jquery-migrate-js" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" strategy="beforeInteractive" />
       </head>
       <body>
         {children}

@@ -6,6 +6,9 @@
     var WidgetCTPostCarouselHandler = function( $scope, $ ) {
         var breakpoints = elementorFrontend.config.breakpoints;
         var carousel = $scope.find(".ct-slick-carousel");
+        if (!carousel.length || !carousel.children().length || carousel.hasClass('slick-initialized')) {
+            return;
+        }
         var data = carousel.data();
         var slickOptions = {
             slidesToShow: data.colxl,
@@ -59,6 +62,10 @@
         if(typeof carousel.attr('data-fade') !== 'undefined') {
             slickOptions.fade = carousel.attr('data-fade') == 'true' ? true : false;
         }
+        if (typeof carousel.slick !== 'function') {
+            return;
+        }
+
         carousel.slick(slickOptions);
 
         $('.ct-nav-carousel').parents('.elementor-element').addClass('hide-nav');
@@ -87,6 +94,9 @@
     $('.ct-slick-slider').each(function () {
         var slider_main = $(this).find('.ct-slick-carousel');
         var slider_nav = $(this).find('.ct-slick-nav');
+        if (!slider_nav.length || !slider_nav.children().length || slider_nav.hasClass('slick-initialized') || typeof slider_nav.slick !== 'function') {
+            return;
+        }
         $(slider_nav).slick({
             slidesToShow: parseInt(slider_nav.attr('data-nav')),
             slidesToScroll: 1,

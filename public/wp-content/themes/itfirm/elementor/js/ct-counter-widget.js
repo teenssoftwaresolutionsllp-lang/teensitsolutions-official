@@ -14,7 +14,26 @@
                 data.rounding = decimalDigits[1].length;
             }
 
-            $number.numerator(data);
+            if ($.fn.numerator) {
+                $number.numerator(data);
+                return;
+            }
+
+            var fromValue = parseFloat($number.text()) || 0,
+                toValue = parseFloat(data.toValue) || 0,
+                duration = parseInt(data.duration, 10) || 1000,
+                rounding = data.rounding || 0;
+
+            $({ value: fromValue }).animate({ value: toValue }, {
+                duration: duration,
+                easing: data.easing || 'swing',
+                step: function (value) {
+                    $number.text(Number(value).toFixed(rounding));
+                },
+                complete: function () {
+                    $number.text(toValue.toFixed(rounding));
+                }
+            });
         }, {
             offset: '95%',
             triggerOnce: true

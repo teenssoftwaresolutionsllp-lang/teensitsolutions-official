@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getPageData } from "@/lib/pages";
+import HeadInjector from "@/components/HeadInjector";
 import PageRenderer from "@/components/PageRenderer";
 import { notFound } from "next/navigation";
 
@@ -19,5 +20,10 @@ export default async function HomePage() {
     notFound();
   }
 
-  return <PageRenderer pageData={pageData} />;
+  return (
+    <>
+      <HeadInjector pageData={pageData} />
+      <PageRenderer bodyHtml={pageData.bodyHtml} bodyClass={pageData.bodyClass} />
+    </>
+  );
 }

@@ -1,10 +1,16 @@
 import { getPageData } from "@/lib/pages";
+import HeadInjector from "@/components/HeadInjector";
 import PageRenderer from "@/components/PageRenderer";
 
 export default function NotFoundPage() {
   const pageData = getPageData("/404");
   if (pageData) {
-    return <PageRenderer pageData={pageData} />;
+    return (
+      <>
+        <HeadInjector pageData={pageData} />
+        <PageRenderer bodyHtml={pageData.bodyHtml} bodyClass={pageData.bodyClass} />
+      </>
+    );
   }
 
   return (
