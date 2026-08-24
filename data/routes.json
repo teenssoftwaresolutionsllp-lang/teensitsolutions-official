@@ -1,0 +1,765 @@
+[
+  {
+    "route": "/2021/07/24",
+    "slugKey": "2021___07___24",
+    "title": "July 24, 2021 – Teens Software Solutions",
+    "description": "",
+    "relPath": "2021/07/24/index.html"
+  },
+  {
+    "route": "/2021/07",
+    "slugKey": "2021___07",
+    "title": "July 2021 – Teens Software Solutions",
+    "description": "",
+    "relPath": "2021/07/index.html"
+  },
+  {
+    "route": "/2021",
+    "slugKey": "2021",
+    "title": "2021 – Teens Software Solutions",
+    "description": "",
+    "relPath": "2021/index.html"
+  },
+  {
+    "route": "/2025/09/25",
+    "slugKey": "2025___09___25",
+    "title": "September 25, 2025 – Teens Software Solutions",
+    "description": "",
+    "relPath": "2025/09/25/index.html"
+  },
+  {
+    "route": "/2025/09",
+    "slugKey": "2025___09",
+    "title": "September 2025 – Teens Software Solutions",
+    "description": "",
+    "relPath": "2025/09/index.html"
+  },
+  {
+    "route": "/2025/10/14",
+    "slugKey": "2025___10___14",
+    "title": "October 14, 2025 – Teens Software Solutions",
+    "description": "",
+    "relPath": "2025/10/14/index.html"
+  },
+  {
+    "route": "/2025/10",
+    "slugKey": "2025___10",
+    "title": "October 2025 – Teens Software Solutions",
+    "description": "",
+    "relPath": "2025/10/index.html"
+  },
+  {
+    "route": "/2025",
+    "slugKey": "2025",
+    "title": "2025 – Teens Software Solutions",
+    "description": "",
+    "relPath": "2025/index.html"
+  },
+  {
+    "route": "/2026/02/02",
+    "slugKey": "2026___02___02",
+    "title": "February 2, 2026 – Teens Software Solutions",
+    "description": "",
+    "relPath": "2026/02/02/index.html"
+  },
+  {
+    "route": "/2026/02",
+    "slugKey": "2026___02",
+    "title": "February 2026 – Teens Software Solutions",
+    "description": "",
+    "relPath": "2026/02/index.html"
+  },
+  {
+    "route": "/2026",
+    "slugKey": "2026",
+    "title": "2026 – Teens Software Solutions",
+    "description": "",
+    "relPath": "2026/index.html"
+  },
+  {
+    "route": "/404",
+    "slugKey": "__404__",
+    "title": "Page not found – Teens Software Solutions",
+    "description": "",
+    "relPath": "404.html"
+  },
+  {
+    "route": "/about",
+    "slugKey": "about",
+    "title": "About – Teens Software Solutions",
+    "description": "",
+    "relPath": "about/index.html"
+  },
+  {
+    "route": "/about-naralasetti-venkata-vijay",
+    "slugKey": "about-naralasetti-venkata-vijay",
+    "title": "About Naralasetti Venkata Vijay – Teens Software Solutions",
+    "description": "",
+    "relPath": "about-naralasetti-venkata-vijay/index.html"
+  },
+  {
+    "route": "/ai-machine-learning-services",
+    "slugKey": "ai-machine-learning-services",
+    "title": "AI & Machine Learning Services – Teens Software Solutions",
+    "description": "",
+    "relPath": "ai-machine-learning-services/index.html"
+  },
+  {
+    "route": "/blog",
+    "slugKey": "blog",
+    "title": "Blog – Teens Software Solutions",
+    "description": "",
+    "relPath": "blog/index.html"
+  },
+  {
+    "route": "/branding-services",
+    "slugKey": "branding-services",
+    "title": "Branding Services – Teens Software Solutions",
+    "description": "",
+    "relPath": "branding-services/index.html"
+  },
+  {
+    "route": "/client-support-services",
+    "slugKey": "client-support-services",
+    "title": "Client Support Services – Teens Software Solutions",
+    "description": "",
+    "relPath": "client-support-services/index.html"
+  },
+  {
+    "route": "/contact",
+    "slugKey": "contact",
+    "title": "Contact – Teens Software Solutions",
+    "description": "",
+    "relPath": "contact/index.html"
+  },
+  {
+    "route": "/content-writing-services",
+    "slugKey": "content-writing-services",
+    "title": "Content Writing Services – Teens Software Solutions",
+    "description": "",
+    "relPath": "content-writing-services/index.html"
+  },
+  {
+    "route": "/conversion-rate-optimization",
+    "slugKey": "conversion-rate-optimization",
+    "title": "Conversion Rate Optimization – Teens Software Solutions",
+    "description": "",
+    "relPath": "conversion-rate-optimization/index.html"
+  },
+  {
+    "route": "/ct-mega-menu/elements",
+    "slugKey": "ct-mega-menu___elements",
+    "title": "Menu Elements – Teens Software Solutions",
+    "description": "",
+    "relPath": "ct-mega-menu/elements/index.html"
+  },
+  {
+    "route": "/ct-mega-menu/menu-demos",
+    "slugKey": "ct-mega-menu___menu-demos",
+    "title": "Menu Demos – Teens Software Solutions",
+    "description": "",
+    "relPath": "ct-mega-menu/menu-demos/index.html"
+  },
+  {
+    "route": "/ct-mega-menu/support",
+    "slugKey": "ct-mega-menu___support",
+    "title": "Support – Teens Software Solutions",
+    "description": "",
+    "relPath": "ct-mega-menu/support/index.html"
+  },
+  {
+    "route": "/cyber-security-services",
+    "slugKey": "cyber-security-services",
+    "title": "Cyber Security Services – Teens Software Solutions",
+    "description": "",
+    "relPath": "cyber-security-services/index.html"
+  },
+  {
+    "route": "/data-communication",
+    "slugKey": "data-communication",
+    "title": "Data Communication – Teens Software Solutions",
+    "description": "",
+    "relPath": "data-communication/index.html"
+  },
+  {
+    "route": "/digital-marketing-skills-show-positive-growth-but-sector-demands-outpace-professional-development",
+    "slugKey": "digital-marketing-skills-show-positive-growth-but-sector-demands-outpace-professional-development",
+    "title": "Digital marketing skills show positive growth but sector demands outpace professional development – Teens Software Solutions",
+    "description": "",
+    "relPath": "digital-marketing-skills-show-positive-growth-but-sector-demands-outpace-professional-development/index.html"
+  },
+  {
+    "route": "/e-commerce-development",
+    "slugKey": "e-commerce-development",
+    "title": "E-commerce Development – Teens Software Solutions",
+    "description": "",
+    "relPath": "e-commerce-development/index.html"
+  },
+  {
+    "route": "/elementor-11176",
+    "slugKey": "elementor-11176",
+    "title": "Best Website Designers in Hyderabad | 2025 Web Design Trends​ – Teens Software Solutions",
+    "description": "",
+    "relPath": "elementor-11176/index.html"
+  },
+  {
+    "route": "/elementor-11213",
+    "slugKey": "elementor-11213",
+    "title": "The Ultimate Guide to E-commerce SEO: Boost Your Online Store Profits – Teens Software Solutions",
+    "description": "",
+    "relPath": "elementor-11213/index.html"
+  },
+  {
+    "route": "/elementor-11286",
+    "slugKey": "elementor-11286",
+    "title": "Mobile App Development Services in 2026: Building Smarter Apps for a Hyper-Connected World – Teens Software Solutions",
+    "description": "",
+    "relPath": "elementor-11286/index.html"
+  },
+  {
+    "route": "/footer/footer-1",
+    "slugKey": "footer___footer-1",
+    "title": "Footer 1 – Teens Software Solutions",
+    "description": "",
+    "relPath": "footer/footer-1/index.html"
+  },
+  {
+    "route": "/footer/footer-2",
+    "slugKey": "footer___footer-2",
+    "title": "Footer 2 – Teens Software Solutions",
+    "description": "",
+    "relPath": "footer/footer-2/index.html"
+  },
+  {
+    "route": "/footer/footer-3",
+    "slugKey": "footer___footer-3",
+    "title": "Footer 3 – Teens Software Solutions",
+    "description": "",
+    "relPath": "footer/footer-3/index.html"
+  },
+  {
+    "route": "/footer/footer-4",
+    "slugKey": "footer___footer-4",
+    "title": "Footer 4 – Teens Software Solutions",
+    "description": "",
+    "relPath": "footer/footer-4/index.html"
+  },
+  {
+    "route": "/footer/footer-6",
+    "slugKey": "footer___footer-6",
+    "title": "Footer 6 – Teens Software Solutions",
+    "description": "",
+    "relPath": "footer/footer-6/index.html"
+  },
+  {
+    "route": "/footer/footer-7",
+    "slugKey": "footer___footer-7",
+    "title": "Footer 7 – Teens Software Solutions",
+    "description": "",
+    "relPath": "footer/footer-7/index.html"
+  },
+  {
+    "route": "/footer/footer-8",
+    "slugKey": "footer___footer-8",
+    "title": "Footer 8 – Teens Software Solutions",
+    "description": "",
+    "relPath": "footer/footer-8/index.html"
+  },
+  {
+    "route": "/footer/footer-9",
+    "slugKey": "footer___footer-9",
+    "title": "Footer 9 – Teens Software Solutions",
+    "description": "",
+    "relPath": "footer/footer-9/index.html"
+  },
+  {
+    "route": "/footer/no-footer",
+    "slugKey": "footer___no-footer",
+    "title": "No Footer – Teens Software Solutions",
+    "description": "",
+    "relPath": "footer/no-footer/index.html"
+  },
+  {
+    "route": "/header/header-rtl",
+    "slugKey": "header___header-rtl",
+    "title": "Header RTL – Teens Software Solutions",
+    "description": "",
+    "relPath": "header/header-rtl/index.html"
+  },
+  {
+    "route": "/header/main-default",
+    "slugKey": "header___main-default",
+    "title": "Main Default – Teens Software Solutions",
+    "description": "",
+    "relPath": "header/main-default/index.html"
+  },
+  {
+    "route": "/header/main-header-1",
+    "slugKey": "header___main-header-1",
+    "title": "Main Header 1 – Teens Software Solutions",
+    "description": "",
+    "relPath": "header/main-header-1/index.html"
+  },
+  {
+    "route": "/header/main-header-2",
+    "slugKey": "header___main-header-2",
+    "title": "Main Header 2 – Teens Software Solutions",
+    "description": "",
+    "relPath": "header/main-header-2/index.html"
+  },
+  {
+    "route": "/header/main-header-3",
+    "slugKey": "header___main-header-3",
+    "title": "Main Header 3 – Teens Software Solutions",
+    "description": "",
+    "relPath": "header/main-header-3/index.html"
+  },
+  {
+    "route": "/header/main-header-4",
+    "slugKey": "header___main-header-4",
+    "title": "Main Header 4 – Teens Software Solutions",
+    "description": "",
+    "relPath": "header/main-header-4/index.html"
+  },
+  {
+    "route": "/header/main-header-5",
+    "slugKey": "header___main-header-5",
+    "title": "Main Header 5 – Teens Software Solutions",
+    "description": "",
+    "relPath": "header/main-header-5/index.html"
+  },
+  {
+    "route": "/header/main-header-6",
+    "slugKey": "header___main-header-6",
+    "title": "Main Header 6 – Teens Software Solutions",
+    "description": "",
+    "relPath": "header/main-header-6/index.html"
+  },
+  {
+    "route": "/header/main-header-7",
+    "slugKey": "header___main-header-7",
+    "title": "Main Header 7 – Teens Software Solutions",
+    "description": "",
+    "relPath": "header/main-header-7/index.html"
+  },
+  {
+    "route": "/header/main-header-8",
+    "slugKey": "header___main-header-8",
+    "title": "Main Header 8 – Teens Software Solutions",
+    "description": "",
+    "relPath": "header/main-header-8/index.html"
+  },
+  {
+    "route": "/header/main-header-9",
+    "slugKey": "header___main-header-9",
+    "title": "Main Header 9 – Teens Software Solutions",
+    "description": "",
+    "relPath": "header/main-header-9/index.html"
+  },
+  {
+    "route": "/header/main-landing",
+    "slugKey": "header___main-landing",
+    "title": "Main Landing – Teens Software Solutions",
+    "description": "",
+    "relPath": "header/main-landing/index.html"
+  },
+  {
+    "route": "/header/sticky-default",
+    "slugKey": "header___sticky-default",
+    "title": "Sticky Default – Teens Software Solutions",
+    "description": "",
+    "relPath": "header/sticky-default/index.html"
+  },
+  {
+    "route": "/header/sticky-header-1",
+    "slugKey": "header___sticky-header-1",
+    "title": "Sticky Header 1 – Teens Software Solutions",
+    "description": "",
+    "relPath": "header/sticky-header-1/index.html"
+  },
+  {
+    "route": "/header/sticky-header-2",
+    "slugKey": "header___sticky-header-2",
+    "title": "Sticky Header 2 – Teens Software Solutions",
+    "description": "",
+    "relPath": "header/sticky-header-2/index.html"
+  },
+  {
+    "route": "/header/sticky-header-3",
+    "slugKey": "header___sticky-header-3",
+    "title": "Sticky Header 3 – Teens Software Solutions",
+    "description": "",
+    "relPath": "header/sticky-header-3/index.html"
+  },
+  {
+    "route": "/header/sticky-header-4",
+    "slugKey": "header___sticky-header-4",
+    "title": "Sticky Header 4 – Teens Software Solutions",
+    "description": "",
+    "relPath": "header/sticky-header-4/index.html"
+  },
+  {
+    "route": "/header/sticky-header-5",
+    "slugKey": "header___sticky-header-5",
+    "title": "Sticky Header 5 – Teens Software Solutions",
+    "description": "",
+    "relPath": "header/sticky-header-5/index.html"
+  },
+  {
+    "route": "/header/sticky-header-6",
+    "slugKey": "header___sticky-header-6",
+    "title": "Sticky Header 6 – Teens Software Solutions",
+    "description": "",
+    "relPath": "header/sticky-header-6/index.html"
+  },
+  {
+    "route": "/header/sticky-header-7",
+    "slugKey": "header___sticky-header-7",
+    "title": "Sticky Header 7 – Teens Software Solutions",
+    "description": "",
+    "relPath": "header/sticky-header-7/index.html"
+  },
+  {
+    "route": "/header/sticky-header-8",
+    "slugKey": "header___sticky-header-8",
+    "title": "Sticky Header 8 – Teens Software Solutions",
+    "description": "",
+    "relPath": "header/sticky-header-8/index.html"
+  },
+  {
+    "route": "/header/sticky-header-9",
+    "slugKey": "header___sticky-header-9",
+    "title": "Sticky Header 9 – Teens Software Solutions",
+    "description": "",
+    "relPath": "header/sticky-header-9/index.html"
+  },
+  {
+    "route": "/header/sticky-header-rtl",
+    "slugKey": "header___sticky-header-rtl",
+    "title": "Sticky Header RTL – Teens Software Solutions",
+    "description": "",
+    "relPath": "header/sticky-header-rtl/index.html"
+  },
+  {
+    "route": "/help-desk-services",
+    "slugKey": "help-desk-services",
+    "title": "Help Desk Services – Teens Software Solutions",
+    "description": "",
+    "relPath": "help-desk-services/index.html"
+  },
+  {
+    "route": "/inbound-outbound-support",
+    "slugKey": "inbound-outbound-support",
+    "title": "Inbound & Outbound Support – Teens Software Solutions",
+    "description": "",
+    "relPath": "inbound-outbound-support/index.html"
+  },
+  {
+    "route": "/",
+    "slugKey": "__home__",
+    "title": "Teens Software Solutions",
+    "description": "",
+    "relPath": "index.html"
+  },
+  {
+    "route": "/influencers-who-fail-to-disclose-ads-are-tarnishing-industry-and-brands",
+    "slugKey": "influencers-who-fail-to-disclose-ads-are-tarnishing-industry-and-brands",
+    "title": "Influencers who fail to disclose ads are ‘tarnishing industry and brands’ – Teens Software Solutions",
+    "description": "",
+    "relPath": "influencers-who-fail-to-disclose-ads-are-tarnishing-industry-and-brands/index.html"
+  },
+  {
+    "route": "/it-consultancy",
+    "slugKey": "it-consultancy",
+    "title": "IT Consultancy – Teens Software Solutions",
+    "description": "",
+    "relPath": "it-consultancy/index.html"
+  },
+  {
+    "route": "/it-outsourcing",
+    "slugKey": "it-outsourcing",
+    "title": "IT Outsourcing – Teens Software Solutions",
+    "description": "",
+    "relPath": "it-outsourcing/index.html"
+  },
+  {
+    "route": "/it-outsourcing-services",
+    "slugKey": "it-outsourcing-services",
+    "title": "IT Outsourcing Services – Teens Software Solutions",
+    "description": "",
+    "relPath": "it-outsourcing-services/index.html"
+  },
+  {
+    "route": "/it-recruitment",
+    "slugKey": "it-recruitment",
+    "title": "IT Recruitment – Teens Software Solutions",
+    "description": "",
+    "relPath": "it-recruitment/index.html"
+  },
+  {
+    "route": "/it-requirements-management",
+    "slugKey": "it-requirements-management",
+    "title": "IT Requirements Management – Teens Software Solutions",
+    "description": "",
+    "relPath": "it-requirements-management/index.html"
+  },
+  {
+    "route": "/marketing-other-related-services",
+    "slugKey": "marketing-other-related-services",
+    "title": "Marketing & Other Related Services – Teens Software Solutions",
+    "description": "",
+    "relPath": "marketing-other-related-services/index.html"
+  },
+  {
+    "route": "/mobile-app-development-services",
+    "slugKey": "mobile-app-development-services",
+    "title": "Mobile App Development Services – Teens Software Solutions",
+    "description": "",
+    "relPath": "mobile-app-development-services/index.html"
+  },
+  {
+    "route": "/monitoring-services",
+    "slugKey": "monitoring-services",
+    "title": "Monitoring Services – Teens Software Solutions",
+    "description": "",
+    "relPath": "monitoring-services/index.html"
+  },
+  {
+    "route": "/new-report-reveals-the-top-ai-content-and-seo-trends-for-2024",
+    "slugKey": "new-report-reveals-the-top-ai-content-and-seo-trends-for-2024",
+    "title": "New Report Reveals the Top AI Content and SEO Trends for 2024 – Teens Software Solutions",
+    "description": "",
+    "relPath": "new-report-reveals-the-top-ai-content-and-seo-trends-for-2024/index.html"
+  },
+  {
+    "route": "/online-reputation-management",
+    "slugKey": "online-reputation-management",
+    "title": "Online Reputation Management – Teens Software Solutions",
+    "description": "",
+    "relPath": "online-reputation-management/index.html"
+  },
+  {
+    "route": "/oracle-pl-sql-services",
+    "slugKey": "oracle-pl-sql-services",
+    "title": "Oracle / PL/SQL Services – Teens Software Solutions",
+    "description": "",
+    "relPath": "oracle-pl-sql-services/index.html"
+  },
+  {
+    "route": "/pay-per-click",
+    "slugKey": "pay-per-click",
+    "title": "Pay Per Click – Teens Software Solutions",
+    "description": "",
+    "relPath": "pay-per-click/index.html"
+  },
+  {
+    "route": "/portfolio/big-data-analytics",
+    "slugKey": "portfolio___big-data-analytics",
+    "title": "Big Data & Analytics – Teens Software Solutions",
+    "description": "",
+    "relPath": "portfolio/big-data-analytics/index.html"
+  },
+  {
+    "route": "/portfolio/collection-management",
+    "slugKey": "portfolio___collection-management",
+    "title": "Collection Management – Teens Software Solutions",
+    "description": "",
+    "relPath": "portfolio/collection-management/index.html"
+  },
+  {
+    "route": "/portfolio/data-management",
+    "slugKey": "portfolio___data-management",
+    "title": "Data Management – Teens Software Solutions",
+    "description": "",
+    "relPath": "portfolio/data-management/index.html"
+  },
+  {
+    "route": "/portfolio/firewall-advance",
+    "slugKey": "portfolio___firewall-advance",
+    "title": "Firewall Advance – Teens Software Solutions",
+    "description": "",
+    "relPath": "portfolio/firewall-advance/index.html"
+  },
+  {
+    "route": "/portfolio/handyman-app",
+    "slugKey": "portfolio___handyman-app",
+    "title": "HandyMan App – Teens Software Solutions",
+    "description": "",
+    "relPath": "portfolio/handyman-app/index.html"
+  },
+  {
+    "route": "/portfolio/internal-networking",
+    "slugKey": "portfolio___internal-networking",
+    "title": "Internal Networking – Teens Software Solutions",
+    "description": "",
+    "relPath": "portfolio/internal-networking/index.html"
+  },
+  {
+    "route": "/portfolio/product-engineering",
+    "slugKey": "portfolio___product-engineering",
+    "title": "Product Engineering – Teens Software Solutions",
+    "description": "",
+    "relPath": "portfolio/product-engineering/index.html"
+  },
+  {
+    "route": "/portfolio/property-simplified",
+    "slugKey": "portfolio___property-simplified",
+    "title": "Property Simplified – Teens Software Solutions",
+    "description": "",
+    "relPath": "portfolio/property-simplified/index.html"
+  },
+  {
+    "route": "/portfolio/research-energy",
+    "slugKey": "portfolio___research-energy",
+    "title": "Research & Energy – Teens Software Solutions",
+    "description": "",
+    "relPath": "portfolio/research-energy/index.html"
+  },
+  {
+    "route": "/portfolio/warranty-management",
+    "slugKey": "portfolio___warranty-management",
+    "title": "Warranty Management – Teens Software Solutions",
+    "description": "",
+    "relPath": "portfolio/warranty-management/index.html"
+  },
+  {
+    "route": "/project-management",
+    "slugKey": "project-management",
+    "title": "Project Management – Teens Software Solutions",
+    "description": "",
+    "relPath": "project-management/index.html"
+  },
+  {
+    "route": "/sap-support-greenfield-implementation-services",
+    "slugKey": "sap-support-greenfield-implementation-services",
+    "title": "SAP Support & Greenfield Implementation Services – Teens Software Solutions",
+    "description": "",
+    "relPath": "sap-support-greenfield-implementation-services/index.html"
+  },
+  {
+    "route": "/search-engine-optimization",
+    "slugKey": "search-engine-optimization",
+    "title": "Search Engine Optimization – Teens Software Solutions",
+    "description": "",
+    "relPath": "search-engine-optimization/index.html"
+  },
+  {
+    "route": "/service/call-centers",
+    "slugKey": "service___call-centers",
+    "title": "Call Centers – Teens Software Solutions",
+    "description": "",
+    "relPath": "service/call-centers/index.html"
+  },
+  {
+    "route": "/service/client-support-services",
+    "slugKey": "service___client-support-services",
+    "title": "Client Support Services – Teens Software Solutions",
+    "description": "",
+    "relPath": "service/client-support-services/index.html"
+  },
+  {
+    "route": "/service/data-communication",
+    "slugKey": "service___data-communication",
+    "title": "Data Communication – Teens Software Solutions",
+    "description": "",
+    "relPath": "service/data-communication/index.html"
+  },
+  {
+    "route": "/service/inbound-outbound-support",
+    "slugKey": "service___inbound-outbound-support",
+    "title": "Inbound & Outbound support – Teens Software Solutions",
+    "description": "",
+    "relPath": "service/inbound-outbound-support/index.html"
+  },
+  {
+    "route": "/service/it-recruitment",
+    "slugKey": "service___it-recruitment",
+    "title": "IT Recruitment – Teens Software Solutions",
+    "description": "",
+    "relPath": "service/it-recruitment/index.html"
+  },
+  {
+    "route": "/service/marketing-services",
+    "slugKey": "service___marketing-services",
+    "title": "Marketing Services – Teens Software Solutions",
+    "description": "",
+    "relPath": "service/marketing-services/index.html"
+  },
+  {
+    "route": "/service/project-management",
+    "slugKey": "service___project-management",
+    "title": "Project Management – Teens Software Solutions",
+    "description": "",
+    "relPath": "service/project-management/index.html"
+  },
+  {
+    "route": "/service/telemarketing-services",
+    "slugKey": "service___telemarketing-services",
+    "title": "Telemarketing Services – Teens Software Solutions",
+    "description": "",
+    "relPath": "service/telemarketing-services/index.html"
+  },
+  {
+    "route": "/services",
+    "slugKey": "services",
+    "title": "Services – Teens Software Solutions",
+    "description": "",
+    "relPath": "services/index.html"
+  },
+  {
+    "route": "/social-media-management",
+    "slugKey": "social-media-management",
+    "title": "Social Media Management – Teens Software Solutions",
+    "description": "",
+    "relPath": "social-media-management/index.html"
+  },
+  {
+    "route": "/social-media-optimization",
+    "slugKey": "social-media-optimization",
+    "title": "Social Media Optimization – Teens Software Solutions",
+    "description": "",
+    "relPath": "social-media-optimization/index.html"
+  },
+  {
+    "route": "/software-quality-assurance",
+    "slugKey": "software-quality-assurance",
+    "title": "Software Quality Assurance – Teens Software Solutions",
+    "description": "",
+    "relPath": "software-quality-assurance/index.html"
+  },
+  {
+    "route": "/software-testing",
+    "slugKey": "software-testing",
+    "title": "Software Testing – Teens Software Solutions",
+    "description": "",
+    "relPath": "software-testing/index.html"
+  },
+  {
+    "route": "/telemarketing-services",
+    "slugKey": "telemarketing-services",
+    "title": "Telemarketing Services – Teens Software Solutions",
+    "description": "",
+    "relPath": "telemarketing-services/index.html"
+  },
+  {
+    "route": "/test",
+    "slugKey": "test",
+    "title": "Test – Teens Software Solutions",
+    "description": "",
+    "relPath": "test/index.html"
+  },
+  {
+    "route": "/web-design-development-services",
+    "slugKey": "web-design-development-services",
+    "title": "Web Design & Development Services – Teens Software Solutions",
+    "description": "",
+    "relPath": "web-design-development-services/index.html"
+  },
+  {
+    "route": "/web-traffic-management",
+    "slugKey": "web-traffic-management",
+    "title": "Web Traffic Management – Teens Software Solutions",
+    "description": "",
+    "relPath": "web-traffic-management/index.html"
+  }
+]
