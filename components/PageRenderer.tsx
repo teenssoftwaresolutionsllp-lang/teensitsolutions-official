@@ -7,7 +7,10 @@ interface PageRendererProps {
   bodyClass: string;
 }
 
-export default function PageRenderer({ bodyHtml, bodyClass }: PageRendererProps) {
+export default function PageRenderer({
+  bodyHtml,
+  bodyClass,
+}: PageRendererProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const scriptsRan = useRef(false);
 

@@ -4,12 +4,12 @@ import path from "path";
 
 export async function POST(
   request: NextRequest,
-  { params }: { params: Promise<{ id: string }> }
+  { params }: { params: Promise<{ id: string }> },
 ) {
   try {
     const { id } = await params;
     const formData = await request.formData();
-    
+
     // Parse form entries
     const submission: Record<string, string> = {
       id: new Date().getTime().toString(),
@@ -39,7 +39,11 @@ export async function POST(
     }
 
     currentSubmissions.push(submission);
-    fs.writeFileSync(filePath, JSON.stringify(currentSubmissions, null, 2), "utf-8");
+    fs.writeFileSync(
+      filePath,
+      JSON.stringify(currentSubmissions, null, 2),
+      "utf-8",
+    );
 
     console.log("Contact form submission received and saved:", submission);
 
@@ -57,10 +61,11 @@ export async function POST(
     return NextResponse.json(
       {
         status: "validation_failed",
-        message: "An error occurred while submitting your message. Please try again.",
+        message:
+          "An error occurred while submitting your message. Please try again.",
         invalid_fields: [],
       },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

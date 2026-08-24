@@ -1,15 +1,15 @@
-import './indicator-bullet.scss';
+import "./indicator-bullet.scss";
 
-export const Indicator = ( props ) => {
-	let className = 'eps-indicator-bullet';
+export const Indicator = (props) => {
+  let className = "eps-indicator-bullet";
 
-	if ( props.active ) {
-		className += ` ${ className }--active`;
-	}
+  if (props.active) {
+    className += ` ${className}--active`;
+  }
 
-	return <i className={ className } />;
+  return <i className={className} />;
 };
 
 Indicator.propTypes = {
-	active: PropTypes.bool,
+  active: PropTypes.bool,
 };

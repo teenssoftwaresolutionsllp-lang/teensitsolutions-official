@@ -1,1 +1,3 @@
-#tab-editor-v4-opt-in.elementor-active~p.submit{display:none}
+#tab-editor-v4-opt-in.elementor-active ~ p.submit {
+  display: none;
+}

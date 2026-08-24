@@ -38,5 +38,11 @@ export default function HeadStyles({ pageData }: { pageData: PageData }) {
 }
 
 function ServerStyles({ html }: { html: string }) {
-  return <div dangerouslySetInnerHTML={{ __html: html }} suppressHydrationWarning style={{ display: "none" }} />;
+  return (
+    <div
+      dangerouslySetInnerHTML={{ __html: html }}
+      suppressHydrationWarning
+      style={{ display: "none" }}
+    />
+  );
 }

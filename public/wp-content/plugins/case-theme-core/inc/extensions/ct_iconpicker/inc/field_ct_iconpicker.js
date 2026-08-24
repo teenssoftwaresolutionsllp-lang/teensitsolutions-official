@@ -1,5 +1,5 @@
 jQuery(function ($) {
-    "user strict";
+  "user strict";
 
-    $(".redux-container-ct_iconpicker .ct-iconpicker").fontIconPicker();
+  $(".redux-container-ct_iconpicker .ct-iconpicker").fontIconPicker();
 });

@@ -1,7 +1,9 @@
-[data-elementor-type=popup]:not(.elementor-edit-area) {
+[data-elementor-type="popup"]:not(.elementor-edit-area) {
   display: none;
 }
-[data-elementor-type=popup] .elementor-section-wrap:not(:empty) + #elementor-add-new-section {
+[data-elementor-type="popup"]
+  .elementor-section-wrap:not(:empty)
+  + #elementor-add-new-section {
   display: none;
 }
 
@@ -11,7 +13,8 @@
   background-color: transparent;
   user-select: auto;
 }
-.elementor-popup-modal .dialog-header, .elementor-popup-modal .dialog-buttons-wrapper {
+.elementor-popup-modal .dialog-header,
+.elementor-popup-modal .dialog-buttons-wrapper {
   display: none;
 }
 .elementor-popup-modal .dialog-close-button {

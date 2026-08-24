@@ -57,7 +57,7 @@ body.elementor-apps-page {
   margin-block-end: 20px;
 }
 .e-a-apps .e-a-heading .e-a-badge {
-  background: #ECFDF5;
+  background: #ecfdf5;
   color: #047857;
   border-radius: 100px;
   padding: 3px 8px;
@@ -94,7 +94,7 @@ body.elementor-apps-page {
   margin-inline-start: auto;
 }
 .e-a-apps .e-a-actions .e-a-learn-more {
-  color: #4338CA;
+  color: #4338ca;
   font-weight: 500;
 }
 

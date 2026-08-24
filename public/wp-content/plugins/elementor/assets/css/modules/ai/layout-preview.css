@@ -1,9 +1,10 @@
-[data-id^=e-ai-preview-container] {
+[data-id^="e-ai-preview-container"] {
   outline: 2px solid var(--e-p-border-con);
   outline-offset: -2px;
 }
 
-[data-id^=e-ai-screenshot-container], [data-id^=e-ai-screenshot-container] * {
+[data-id^="e-ai-screenshot-container"],
+[data-id^="e-ai-screenshot-container"] * {
   animation-duration: 0s !important;
   animation-iteration-count: 1 !important;
   transition-duration: 0s !important;
@@ -28,7 +29,7 @@
 }
 .e-ai-layout-button--sparkle {
   --animation-duration: 1.5s;
-  --opacity: .2;
+  --opacity: 0.2;
   --size: 6px;
   position: absolute;
   z-index: 99999;
@@ -39,23 +40,28 @@
   background-size: cover;
   opacity: 0;
 }
-.e-ai-layout-button--sparkle:nth-child(1), .e-ai-layout-button--sparkle:nth-child(2), .e-ai-layout-button--sparkle:nth-child(3) {
+.e-ai-layout-button--sparkle:nth-child(1),
+.e-ai-layout-button--sparkle:nth-child(2),
+.e-ai-layout-button--sparkle:nth-child(3) {
   right: 12px;
   top: 12px;
 }
-.e-ai-layout-button--sparkle:nth-child(4), .e-ai-layout-button--sparkle:nth-child(5), .e-ai-layout-button--sparkle:nth-child(6), .e-ai-layout-button--sparkle:nth-child(7) {
+.e-ai-layout-button--sparkle:nth-child(4),
+.e-ai-layout-button--sparkle:nth-child(5),
+.e-ai-layout-button--sparkle:nth-child(6),
+.e-ai-layout-button--sparkle:nth-child(7) {
   right: 12px;
   top: 22px;
 }
 .e-ai-layout-button--sparkle:nth-child(1) {
-  --opacity: .3;
+  --opacity: 0.3;
   --size: 4px;
   --animation-name: sparkle-1;
 }
 .e-ai-layout-button--sparkle:nth-child(2) {
-  --opacity: .3;
+  --opacity: 0.3;
   --size: 4px;
-  --animation-delay: .7s;
+  --animation-delay: 0.7s;
   --animation-name: sparkle-2;
 }
 .e-ai-layout-button--sparkle:nth-child(3) {
@@ -63,7 +69,7 @@
   --animation-name: sparkle-3;
 }
 .e-ai-layout-button--sparkle:nth-child(4) {
-  --animation-delay: .5s;
+  --animation-delay: 0.5s;
   --animation-name: sparkle-4;
 }
 .e-ai-layout-button--sparkle:nth-child(5) {
@@ -75,13 +81,17 @@
   --animation-name: sparkle-6;
 }
 .e-ai-layout-button--sparkle:nth-child(7) {
-  --opacity: .3;
-  --animation-delay: .7s;
+  --opacity: 0.3;
+  --animation-delay: 0.7s;
   --animation-name: sparkle-7;
 }
 .e-ai-layout-button:hover .e-ai-layout-button--sparkle {
-  --timing: cubic-bezier( 0, 1.18, .96, .75 );
-  animation: var(--animation-name) var(--animation-duration) var(--animation-delay, 0s) var(--timing) infinite both, sparkle-opacity var(--animation-duration) var(--animation-delay, 0s) var(--timing) infinite both;
+  --timing: cubic-bezier(0, 1.18, 0.96, 0.75);
+  animation:
+    var(--animation-name) var(--animation-duration) var(--animation-delay, 0s)
+      var(--timing) infinite both,
+    sparkle-opacity var(--animation-duration) var(--animation-delay, 0s)
+      var(--timing) infinite both;
 }
 
 @keyframes sparkle-opacity {

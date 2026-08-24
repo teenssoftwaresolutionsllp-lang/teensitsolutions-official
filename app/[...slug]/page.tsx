@@ -10,7 +10,9 @@ interface PageProps {
   params: Promise<{ slug: string[] }>;
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
   const { slug } = await params;
   const route = "/" + slug.join("/");
   const pageData = getPageData(route);
@@ -21,7 +23,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   return {
     title: pageData.title,
-    description: pageData.description || `${pageData.title} - Teens Software Solutions`,
+    description:
+      pageData.description || `${pageData.title} - Teens Software Solutions`,
   };
 }
 
@@ -37,7 +40,10 @@ export default async function DynamicPage({ params }: PageProps) {
   return (
     <>
       <HeadInjector pageData={pageData} />
-      <PageRenderer bodyHtml={pageData.bodyHtml} bodyClass={pageData.bodyClass} />
+      <PageRenderer
+        bodyHtml={pageData.bodyHtml}
+        bodyClass={pageData.bodyClass}
+      />
     </>
   );
 }

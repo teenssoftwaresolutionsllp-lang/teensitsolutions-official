@@ -35,7 +35,7 @@
 .form-table tr:hover {
   background-color: transparent;
 }
-.form-table input[type=checkbox] {
+.form-table input[type="checkbox"] {
   margin: 0;
   margin-inline-end: 4px;
   vertical-align: middle;
@@ -52,8 +52,8 @@
   color: var(--e-one-palette-text-primary);
   line-height: 1.5;
 }
-.form-table td > label input[type=checkbox],
-.form-table td > .elementor-field-row input[type=checkbox] {
+.form-table td > label input[type="checkbox"],
+.form-table td > .elementor-field-row input[type="checkbox"] {
   position: absolute;
   inset-inline-start: 0;
   inset-block-start: 2px;
@@ -111,7 +111,8 @@
 .wp-list-table tfoot td.check-column {
   text-align: center;
 }
-.wp-list-table thead th.sortable a, .wp-list-table thead th.sorted a,
+.wp-list-table thead th.sortable a,
+.wp-list-table thead th.sorted a,
 .wp-list-table thead td.sortable a,
 .wp-list-table thead td.sorted a,
 .wp-list-table tfoot th.sortable a,
@@ -125,7 +126,9 @@
   background-color: var(--e-one-palette-background-default);
   font-weight: 400;
 }
-.wp-list-table tbody tr.alternate, .wp-list-table tbody tr:nth-child(odd), .wp-list-table tbody tr:nth-child(even) {
+.wp-list-table tbody tr.alternate,
+.wp-list-table tbody tr:nth-child(odd),
+.wp-list-table tbody tr:nth-child(even) {
   background-color: var(--e-one-palette-background-default);
 }
 .wp-list-table tbody tr:hover {
@@ -161,7 +164,10 @@
   color: var(--e-one-palette-text-primary);
   text-decoration: underline;
 }
-.wp-list-table tbody tr a.delete, .wp-list-table tbody tr a[href*="action=trash"], .wp-list-table tbody tr a[href*="action=delete"], .wp-list-table tbody tr a.submitdelete,
+.wp-list-table tbody tr a.delete,
+.wp-list-table tbody tr a[href*="action=trash"],
+.wp-list-table tbody tr a[href*="action=delete"],
+.wp-list-table tbody tr a.submitdelete,
 .wp-list-table tbody tr .button-link.delete,
 .wp-list-table tbody tr .button-link[href*="action=trash"],
 .wp-list-table tbody tr .button-link[href*="action=delete"],
@@ -184,7 +190,10 @@
 .wp-list-table tbody th .button-link.submitdelete {
   color: var(--e-one-palette-error-main);
 }
-.wp-list-table tbody tr a.delete:hover, .wp-list-table tbody tr a[href*="action=trash"]:hover, .wp-list-table tbody tr a[href*="action=delete"]:hover, .wp-list-table tbody tr a.submitdelete:hover,
+.wp-list-table tbody tr a.delete:hover,
+.wp-list-table tbody tr a[href*="action=trash"]:hover,
+.wp-list-table tbody tr a[href*="action=delete"]:hover,
+.wp-list-table tbody tr a.submitdelete:hover,
 .wp-list-table tbody tr .button-link.delete:hover,
 .wp-list-table tbody tr .button-link[href*="action=trash"]:hover,
 .wp-list-table tbody tr .button-link[href*="action=delete"]:hover,
@@ -235,11 +244,12 @@
   width: 2.2em;
   padding: 10px;
 }
-.wp-list-table .check-column input[type=checkbox] {
+.wp-list-table .check-column input[type="checkbox"] {
   margin: 0;
 }
 
-#elementor-element-manager-wrap .wp-list-table thead th.sortable button, #elementor-element-manager-wrap .wp-list-table thead th.sorted button {
+#elementor-element-manager-wrap .wp-list-table thead th.sortable button,
+#elementor-element-manager-wrap .wp-list-table thead th.sorted button {
   all: unset;
   display: flex;
   align-items: center;
@@ -252,33 +262,106 @@
   width: 100%;
   justify-content: flex-start;
 }
-#elementor-element-manager-wrap .wp-list-table thead th.sortable button:hover, #elementor-element-manager-wrap .wp-list-table thead th.sorted button:hover {
+#elementor-element-manager-wrap .wp-list-table thead th.sortable button:hover,
+#elementor-element-manager-wrap .wp-list-table thead th.sorted button:hover {
   color: var(--e-one-palette-text-primary);
 }
-#elementor-element-manager-wrap .wp-list-table thead th.sortable button .sorting-indicators, #elementor-element-manager-wrap .wp-list-table thead th.sorted button .sorting-indicators {
+#elementor-element-manager-wrap
+  .wp-list-table
+  thead
+  th.sortable
+  button
+  .sorting-indicators,
+#elementor-element-manager-wrap
+  .wp-list-table
+  thead
+  th.sorted
+  button
+  .sorting-indicators {
   display: flex;
   flex-direction: column;
   margin-inline-start: 4px;
 }
-#elementor-element-manager-wrap .wp-list-table thead th.sortable button .sorting-indicators .sorting-indicator, #elementor-element-manager-wrap .wp-list-table thead th.sorted button .sorting-indicators .sorting-indicator {
+#elementor-element-manager-wrap
+  .wp-list-table
+  thead
+  th.sortable
+  button
+  .sorting-indicators
+  .sorting-indicator,
+#elementor-element-manager-wrap
+  .wp-list-table
+  thead
+  th.sorted
+  button
+  .sorting-indicators
+  .sorting-indicator {
   width: 0;
   height: 0;
   border-inline-start: 4px solid transparent;
   border-inline-end: 4px solid transparent;
   margin-block: 1px;
 }
-#elementor-element-manager-wrap .wp-list-table thead th.sortable button .sorting-indicators .sorting-indicator.asc, #elementor-element-manager-wrap .wp-list-table thead th.sorted button .sorting-indicators .sorting-indicator.asc {
+#elementor-element-manager-wrap
+  .wp-list-table
+  thead
+  th.sortable
+  button
+  .sorting-indicators
+  .sorting-indicator.asc,
+#elementor-element-manager-wrap
+  .wp-list-table
+  thead
+  th.sorted
+  button
+  .sorting-indicators
+  .sorting-indicator.asc {
   border-block-end: 4px solid var(--e-one-palette-text-tertiary);
   border-block-start: none;
 }
-#elementor-element-manager-wrap .wp-list-table thead th.sortable button .sorting-indicators .sorting-indicator.desc, #elementor-element-manager-wrap .wp-list-table thead th.sorted button .sorting-indicators .sorting-indicator.desc {
+#elementor-element-manager-wrap
+  .wp-list-table
+  thead
+  th.sortable
+  button
+  .sorting-indicators
+  .sorting-indicator.desc,
+#elementor-element-manager-wrap
+  .wp-list-table
+  thead
+  th.sorted
+  button
+  .sorting-indicators
+  .sorting-indicator.desc {
   border-block-start: 4px solid var(--e-one-palette-text-tertiary);
   border-block-end: none;
 }
-#elementor-element-manager-wrap .wp-list-table thead th.sortable button.sorted .sorting-indicator.asc, #elementor-element-manager-wrap .wp-list-table thead th.sorted button.sorted .sorting-indicator.asc {
+#elementor-element-manager-wrap
+  .wp-list-table
+  thead
+  th.sortable
+  button.sorted
+  .sorting-indicator.asc,
+#elementor-element-manager-wrap
+  .wp-list-table
+  thead
+  th.sorted
+  button.sorted
+  .sorting-indicator.asc {
   border-block-end-color: var(--e-one-palette-text-primary);
 }
-#elementor-element-manager-wrap .wp-list-table thead th.sortable button.sorted .sorting-indicator.desc, #elementor-element-manager-wrap .wp-list-table thead th.sorted button.sorted .sorting-indicator.desc {
+#elementor-element-manager-wrap
+  .wp-list-table
+  thead
+  th.sortable
+  button.sorted
+  .sorting-indicator.desc,
+#elementor-element-manager-wrap
+  .wp-list-table
+  thead
+  th.sorted
+  button.sorted
+  .sorting-indicator.desc {
   border-block-start-color: var(--e-one-palette-text-primary);
 }
 #elementor-element-manager-wrap .wp-list-table tbody td .MuiSwitch-root {
@@ -286,10 +369,12 @@
 }
 
 @media screen and (min-width: 783px) {
-  body.post-type-elementor_library .wp-list-table thead th#title, body.post-type-elementor_library .wp-list-table thead th.column-title {
+  body.post-type-elementor_library .wp-list-table thead th#title,
+  body.post-type-elementor_library .wp-list-table thead th.column-title {
     width: 20%;
   }
-  body.post-type-elementor_library .wp-list-table tbody td#title, body.post-type-elementor_library .wp-list-table tbody td.column-title {
+  body.post-type-elementor_library .wp-list-table tbody td#title,
+  body.post-type-elementor_library .wp-list-table tbody td.column-title {
     width: 20%;
   }
 }

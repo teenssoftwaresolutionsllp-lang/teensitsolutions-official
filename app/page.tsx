@@ -10,7 +10,9 @@ export async function generateMetadata(): Promise<Metadata> {
 
   return {
     title: pageData.title,
-    description: pageData.description || "Teens Software Solutions - IT Solutions & Consulting",
+    description:
+      pageData.description ||
+      "Teens Software Solutions - IT Solutions & Consulting",
   };
 }
 
@@ -23,7 +25,10 @@ export default async function HomePage() {
   return (
     <>
       <HeadInjector pageData={pageData} />
-      <PageRenderer bodyHtml={pageData.bodyHtml} bodyClass={pageData.bodyClass} />
+      <PageRenderer
+        bodyHtml={pageData.bodyHtml}
+        bodyClass={pageData.bodyClass}
+      />
     </>
   );
 }

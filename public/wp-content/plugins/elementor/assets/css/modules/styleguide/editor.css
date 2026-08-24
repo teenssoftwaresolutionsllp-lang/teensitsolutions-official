@@ -2,7 +2,8 @@ body.e-styleguide-shown {
   overflow: hidden;
 }
 
-#e-styleguide-preview-dialog.dialog-styleguide-widget .dialog-styleguide-widget-content {
+#e-styleguide-preview-dialog.dialog-styleguide-widget
+  .dialog-styleguide-widget-content {
   width: 100%;
   height: 100%;
   max-width: 100%;
@@ -12,7 +13,8 @@ body.e-styleguide-shown {
   left: 0 !important;
   overflow: scroll;
 }
-#e-styleguide-preview-dialog.dialog-styleguide-widget .dialog-styleguide-message {
+#e-styleguide-preview-dialog.dialog-styleguide-widget
+  .dialog-styleguide-message {
   min-height: 100vh;
   padding: 0;
   overflow-x: hidden;
@@ -26,7 +28,9 @@ body.e-styleguide-shown {
   align-items: center;
   justify-content: center;
 }
-#e-styleguide-preview-dialog.dialog-styleguide-widget .e-styleguide-loader .eicon-loading {
+#e-styleguide-preview-dialog.dialog-styleguide-widget
+  .e-styleguide-loader
+  .eicon-loading {
   font-size: 25px;
   color: var(--e-a-color-txt-muted);
 }

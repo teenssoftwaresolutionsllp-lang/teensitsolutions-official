@@ -11,12 +11,17 @@
   height: calc(40px * var(--e-is-device-mode));
   align-self: stretch;
   flex-shrink: 0;
-  transition: height 0.2s ease-in-out, opacity 0.1s;
+  transition:
+    height 0.2s ease-in-out,
+    opacity 0.1s;
   left: 0;
   top: 0;
   z-index: 100;
   opacity: var(--e-is-device-mode);
-  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.33), 0 0 2px 1px rgba(0, 0, 0, 0.25), 0 0 6px -3px rgba(255, 255, 255, 0.5);
+  box-shadow:
+    0 0 10px 2px rgba(0, 0, 0, 0.33),
+    0 0 2px 1px rgba(0, 0, 0, 0.25),
+    0 0 6px -3px rgba(255, 255, 255, 0.5);
 }
 #elementor-responsive-bar:before {
   content: "";
@@ -41,9 +46,9 @@
   color: var(--e-a-color-primary-bold);
   background-color: #310132;
 }
-.e-responsive-bar-switcher__option[aria-selected=true] {
+.e-responsive-bar-switcher__option[aria-selected="true"] {
   background-color: #3f444b;
-  color: #F9FAFA;
+  color: #f9fafa;
 }
 .e-responsive-bar-switcher__option input {
   display: none;
@@ -53,8 +58,8 @@
 }
 .e-responsive-bar__button {
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   background: none;
   border: 0 none;
   cursor: pointer;
@@ -64,7 +69,7 @@
   outline: none;
 }
 .e-responsive-bar__button:hover {
-  color: #F1F2F3;
+  color: #f1f2f3;
   background-color: #3f444b;
 }
 .e-responsive-bar--pipe {
@@ -75,15 +80,15 @@
   display: block;
   height: 20px;
   width: 1px;
-  background-color: #BABFC5;
+  background-color: #babfc5;
   position: absolute;
   inset-inline-end: -5px;
   top: calc(50% - 10px);
 }
 .e-responsive-bar__input-size {
   background-color: transparent;
-  color: #BABFC5;
-  border: 1px solid #BABFC5;
+  color: #babfc5;
+  border: 1px solid #babfc5;
   padding: 0 3px;
   width: 60px;
   font-size: 12px;
@@ -93,14 +98,14 @@
   text-align: center;
 }
 .e-responsive-bar__input-size-separator {
-  color: #BABFC5;
+  color: #babfc5;
 }
 .e-responsive-bar__input-size[disabled] {
   background-color: transparent;
-  color: #818A96;
+  color: #818a96;
   cursor: default;
   -moz-appearance: none;
-       appearance: none;
+  appearance: none;
   -webkit-appearance: none;
 }
 
@@ -113,10 +118,13 @@
   grid-template-columns: auto 1fr;
   align-items: center;
   justify-content: space-between;
-  color: #BABFC5;
+  color: #babfc5;
   background-color: #1f2124;
 }
-#e-responsive-bar__center, #e-responsive-bar__end, #e-responsive-bar-scale, #e-responsive-bar-switcher {
+#e-responsive-bar__center,
+#e-responsive-bar__end,
+#e-responsive-bar-scale,
+#e-responsive-bar-switcher {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -135,7 +143,8 @@
     content: "";
   }
 }
-#e-responsive-bar__close-button, #e-responsive-bar__settings-button {
+#e-responsive-bar__close-button,
+#e-responsive-bar__settings-button {
   width: 22px;
   height: 22px;
   border-radius: 3px;
@@ -146,7 +155,7 @@
   display: flex;
   align-items: center;
   margin-inline-end: 8px;
-  color: #BABFC5;
+  color: #babfc5;
 }
 #e-responsive-bar-switcher {
   padding: 0 20px;
@@ -159,7 +168,9 @@
   min-width: 32px;
   text-align: center;
 }
-#e-responsive-bar-scale__plus, #e-responsive-bar-scale__minus, #e-responsive-bar-scale__reset {
+#e-responsive-bar-scale__plus,
+#e-responsive-bar-scale__minus,
+#e-responsive-bar-scale__reset {
   cursor: pointer;
   width: 20px;
   height: 20px;
@@ -169,8 +180,10 @@
   border-radius: 3px;
   transition: all 0.3s;
 }
-#e-responsive-bar-scale__plus:hover, #e-responsive-bar-scale__minus:hover, #e-responsive-bar-scale__reset:hover {
-  color: #F1F2F3;
+#e-responsive-bar-scale__plus:hover,
+#e-responsive-bar-scale__minus:hover,
+#e-responsive-bar-scale__reset:hover {
+  color: #f1f2f3;
   background-color: #3f444b;
 }
 #e-responsive-bar-scale__minus:before {
@@ -178,11 +191,11 @@
   display: block;
   width: 13px;
   height: 2px;
-  background-color: #BABFC5;
+  background-color: #babfc5;
   border-radius: 3px;
 }
 #e-responsive-bar-scale__minus:hover:before {
-  background-color: #F1F2F3;
+  background-color: #f1f2f3;
 }
 #e-responsive-bar-scale__reset {
   margin: 0 8px;

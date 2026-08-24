@@ -48,7 +48,12 @@ export function getAllRoutes(): RouteIndexItem[] {
 export function getPageData(route: string): PageData | null {
   try {
     const slugKey = routeToSlugKey(route);
-    const filePath = path.join(process.cwd(), "data", "pages", `${slugKey}.json`);
+    const filePath = path.join(
+      process.cwd(),
+      "data",
+      "pages",
+      `${slugKey}.json`,
+    );
     if (!fs.existsSync(filePath)) return null;
     const content = fs.readFileSync(filePath, "utf-8");
     return JSON.parse(content);

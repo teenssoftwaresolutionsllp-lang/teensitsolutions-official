@@ -68,7 +68,9 @@
   box-shadow: none;
   text-shadow: none;
 }
-#wpcontent .e-conversion-banner__button.button.button-primary:hover, #wpcontent .e-conversion-banner__button.button.button-primary:focus, #wpcontent .e-conversion-banner__button.button.button-primary:active,
+#wpcontent .e-conversion-banner__button.button.button-primary:hover,
+#wpcontent .e-conversion-banner__button.button.button-primary:focus,
+#wpcontent .e-conversion-banner__button.button.button-primary:active,
 .e-conversion-banner__button.button.button-primary:hover,
 .e-conversion-banner__button.button.button-primary:focus,
 .e-conversion-banner__button.button.button-primary:active {

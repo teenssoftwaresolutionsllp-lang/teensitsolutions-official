@@ -33,8 +33,10 @@ export default function HeadInjector({ pageData }: { pageData: PageData }) {
         const scriptId = node.getAttribute("id");
         const scriptSource = node.getAttribute("src");
         if (
-          (scriptId && document.querySelector(`script#${CSS.escape(scriptId)}`)) ||
-          (scriptSource && document.querySelector(`script[src="${CSS.escape(scriptSource)}"]`))
+          (scriptId &&
+            document.querySelector(`script#${CSS.escape(scriptId)}`)) ||
+          (scriptSource &&
+            document.querySelector(`script[src="${CSS.escape(scriptSource)}"]`))
         ) {
           continue;
         }
@@ -57,7 +59,9 @@ export default function HeadInjector({ pageData }: { pageData: PageData }) {
 
     for (const node of nodes) {
       if (node.tagName.toLowerCase() === "script") continue;
-      const asset = document.head.querySelector(`[data-exported-asset="${CSS.escape(node.outerHTML)}"]`);
+      const asset = document.head.querySelector(
+        `[data-exported-asset="${CSS.escape(node.outerHTML)}"]`,
+      );
       if (asset) continue;
       const clone = node.cloneNode(true) as HTMLElement;
       clone.setAttribute("data-exported-asset", node.outerHTML);

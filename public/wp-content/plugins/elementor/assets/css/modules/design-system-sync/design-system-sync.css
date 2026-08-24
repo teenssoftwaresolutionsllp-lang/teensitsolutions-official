@@ -100,7 +100,8 @@
   border-top-color: var(--e-a-color-txt);
 }
 
-.e-v4-color-variable-list__edit-btn-wrapper:hover .e-v4-color-variable-list__tooltip {
+.e-v4-color-variable-list__edit-btn-wrapper:hover
+  .e-v4-color-variable-list__tooltip {
   opacity: 1;
 }
 

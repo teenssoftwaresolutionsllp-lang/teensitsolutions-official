@@ -4,5 +4,5 @@
  * @author: Case Themes
  */
 (function ($) {
-    console.log($('.ct-icon-picker'));
+  console.log($(".ct-icon-picker"));
 })(jQuery);

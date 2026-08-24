@@ -1,36 +1,39 @@
-(function($){
-    "user strict";
+(function ($) {
+  "user strict";
 
-    $( window ).on( 'elementor:init', function() {
-        var emojioneareaItemView = elementor.modules.controls.BaseData.extend({
-            onReady: function () {
-                var self = this,
-                    options = _.extend({
-                        events: {
-                            change: () => self.saveValue(),
-                            emojibtn_click: () => self.saveValue(),
-                            keyup: () => self.saveValue()
-                        },
-                        pickerPosition: 'bottom',
-                        filtersPosition: 'top',
-                        searchPosition: 'bottom',
-                        saveEmojisAs: 'unicode',
-                        inline: false,
-                    }, this.model.get('emojionearea_options'));
-
-                this.ui.textarea.emojioneArea(options);
+  $(window).on("elementor:init", function () {
+    var emojioneareaItemView = elementor.modules.controls.BaseData.extend({
+      onReady: function () {
+        var self = this,
+          options = _.extend(
+            {
+              events: {
+                change: () => self.saveValue(),
+                emojibtn_click: () => self.saveValue(),
+                keyup: () => self.saveValue(),
+              },
+              pickerPosition: "bottom",
+              filtersPosition: "top",
+              searchPosition: "bottom",
+              saveEmojisAs: "unicode",
+              inline: false,
             },
+            this.model.get("emojionearea_options"),
+          );
 
-            saveValue: function () {
-                this.setValue(this.ui.textarea[0].emojioneArea.getText());
-            },
+        this.ui.textarea.emojioneArea(options);
+      },
 
-            onBeforeDestroy: function () {
-                this.saveValue();
-                this.ui.textarea[0].emojioneArea.off();
-            }
-        });
+      saveValue: function () {
+        this.setValue(this.ui.textarea[0].emojioneArea.getText());
+      },
 
-        elementor.addControlView('emojionearea', emojioneareaItemView);
-    } );
-}(jQuery));
+      onBeforeDestroy: function () {
+        this.saveValue();
+        this.ui.textarea[0].emojioneArea.off();
+      },
+    });
+
+    elementor.addControlView("emojionearea", emojioneareaItemView);
+  });
+})(jQuery);

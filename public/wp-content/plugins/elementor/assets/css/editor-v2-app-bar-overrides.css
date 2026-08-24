@@ -36,10 +36,17 @@ body.elementor-navigator-docked #elementor-navigator {
   flex-direction: column;
   height: 100%;
 }
-.elementor-control-type-wysiwyg .mce-fullscreen > .mce-container-body > .mce-edit-area {
+.elementor-control-type-wysiwyg
+  .mce-fullscreen
+  > .mce-container-body
+  > .mce-edit-area {
   flex-grow: 1;
 }
-.elementor-control-type-wysiwyg .mce-fullscreen > .mce-container-body > .mce-edit-area > iframe {
+.elementor-control-type-wysiwyg
+  .mce-fullscreen
+  > .mce-container-body
+  > .mce-edit-area
+  > iframe {
   height: 100% !important;
 }
 /*# sourceMappingURL=editor-v2-app-bar-overrides.css.map */
