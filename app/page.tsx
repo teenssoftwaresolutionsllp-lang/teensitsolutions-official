@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getPageData } from "@/lib/pages";
+import { createPageMetadata } from "@/lib/metadata";
 import HeadInjector from "@/components/HeadInjector";
 import PageRenderer from "@/components/PageRenderer";
 import { notFound } from "next/navigation";
@@ -8,12 +9,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const pageData = getPageData("/");
   if (!pageData) return { title: "Teens Software Solutions" };
 
-  return {
-    title: pageData.title,
-    description:
-      pageData.description ||
-      "Teens Software Solutions - IT Solutions & Consulting",
-  };
+  return createPageMetadata(pageData);
 }
 
 export default async function HomePage() {

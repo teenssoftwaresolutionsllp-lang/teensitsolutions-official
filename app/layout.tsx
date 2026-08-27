@@ -5,6 +5,14 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Teens Software Solutions",
   description: "IT Consulting & Digital Transformation Solutions",
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL || "https://www.teensitsolutions.com",
+  ),
+  openGraph: {
+    siteName: "Teens Software Solutions",
+    type: "website",
+    locale: "en_US",
+  },
   icons: {
     icon: "/wp-content/uploads/2021/09/TEENS-LOGO-new.png",
   },
