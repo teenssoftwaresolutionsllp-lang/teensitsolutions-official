@@ -36,25 +36,15 @@ export function routeToSlugKey(route: string): string {
   if (route === "/" || route === "") return "__home__";
   if (route === "/404") return "__404__";
   return route.replace(/^\//, "").replace(/\//g, "___");
-}
-
-export function getAllRoutes(): RouteIndexItem[] {
+}export function getAllRoutes(): RouteIndexItem[] {
   try {
     const routesPath = path.join(process.cwd(), "data", "routes.json");
+
     if (!fs.existsSync(routesPath)) return [];
+
     const content = fs.readFileSync(routesPath, "utf-8");
-    const pageData = JSON.parse(content) as PageData;
-    const seoContent = getSeoPageContent(route);
 
-    if (!seoContent) return pageData;
-
-    return {
-      ...pageData,
-      metaTitle: seoContent.metaTitle,
-      metaDescription: seoContent.metaDescription,
-      focusKeyword: seoContent.focusKeyword,
-      seoContentHtml: seoContent.contentHtml,
-    };
+    return JSON.parse(content) as RouteIndexItem[];
   } catch (err) {
     console.error("Error reading routes.json:", err);
     return [];

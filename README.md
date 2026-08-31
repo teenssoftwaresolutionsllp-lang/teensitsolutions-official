@@ -32,3 +32,7 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+
+Whenever you push something run this command:
+npx vercel --prod
