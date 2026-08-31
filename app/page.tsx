@@ -24,6 +24,7 @@ export default async function HomePage() {
       <PageRenderer
         bodyHtml={pageData.bodyHtml}
         bodyClass={pageData.bodyClass}
+        seoContentHtml={pageData.seoContentHtml}
       />
     </>
   );

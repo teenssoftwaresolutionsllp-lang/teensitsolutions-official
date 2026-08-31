@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { getSeoPageContent } from "@/lib/seo-content";
 
 export interface ScriptItem {
   src: string | null;
@@ -17,6 +18,10 @@ export interface PageData {
   headStyles: string[];
   bodyHtml: string;
   scripts?: ScriptItem[];
+  metaTitle?: string;
+  metaDescription?: string;
+  focusKeyword?: string;
+  seoContentHtml?: string;
 }
 
 export interface RouteIndexItem {
@@ -38,7 +43,18 @@ export function getAllRoutes(): RouteIndexItem[] {
     const routesPath = path.join(process.cwd(), "data", "routes.json");
     if (!fs.existsSync(routesPath)) return [];
     const content = fs.readFileSync(routesPath, "utf-8");
-    return JSON.parse(content);
+    const pageData = JSON.parse(content) as PageData;
+    const seoContent = getSeoPageContent(route);
+
+    if (!seoContent) return pageData;
+
+    return {
+      ...pageData,
+      metaTitle: seoContent.metaTitle,
+      metaDescription: seoContent.metaDescription,
+      focusKeyword: seoContent.focusKeyword,
+      seoContentHtml: seoContent.contentHtml,
+    };
   } catch (err) {
     console.error("Error reading routes.json:", err);
     return [];

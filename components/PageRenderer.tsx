@@ -5,11 +5,13 @@ import { useEffect, useRef } from "react";
 interface PageRendererProps {
   bodyHtml: string;
   bodyClass: string;
+  seoContentHtml?: string;
 }
 
 export default function PageRenderer({
   bodyHtml,
   bodyClass,
+  seoContentHtml,
 }: PageRendererProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const scriptsRan = useRef(false);
@@ -95,12 +97,19 @@ export default function PageRenderer({
     });
   }, [bodyHtml, bodyClass]);
 
+  const renderedHtml = seoContentHtml
+    ? bodyHtml.replace(
+        '<div id="content"',
+        `<section class="seo-content" aria-label="Page information">${seoContentHtml}</section><div id="content"`,
+      )
+    : bodyHtml;
+
   return (
     <div
       ref={containerRef}
       id="page-content-wrapper"
       suppressHydrationWarning
-      dangerouslySetInnerHTML={{ __html: bodyHtml }}
+      dangerouslySetInnerHTML={{ __html: renderedHtml }}
     />
   );
 }

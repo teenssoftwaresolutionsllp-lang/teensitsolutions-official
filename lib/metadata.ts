@@ -7,6 +7,10 @@ const siteUrl =
 const socialImage = "/wp-content/uploads/2021/09/TEENS-LOGO-new.png";
 
 function getDescription(pageData: PageData): string {
+  if (pageData.metaDescription?.trim()) {
+    return pageData.metaDescription.trim();
+  }
+
   if (pageData.description.trim()) return pageData.description.trim();
 
   const pageName = pageData.title
@@ -18,21 +22,24 @@ function getDescription(pageData: PageData): string {
 
 export function createPageMetadata(pageData: PageData): Metadata {
   const description = getDescription(pageData);
+  const title = pageData.metaTitle?.trim() || pageData.title;
+  const keywords = [
+    "Teens Software Solutions",
+    "IT consulting",
+    "software development",
+    "digital marketing",
+    "cybersecurity services",
+    pageData.focusKeyword,
+    title,
+  ].filter((keyword): keyword is string => Boolean(keyword));
   const isNotFound = pageData.route === "/404";
   const canonical =
     pageData.route === "/" ? siteUrl : `${siteUrl}${pageData.route}`;
 
   return {
-    title: pageData.title,
+    title,
     description,
-    keywords: [
-      "Teens Software Solutions",
-      "IT consulting",
-      "software development",
-      "digital marketing",
-      "cybersecurity services",
-      pageData.title,
-    ],
+    keywords,
     alternates: {
       canonical,
     },
@@ -40,7 +47,7 @@ export function createPageMetadata(pageData: PageData): Metadata {
       ? { index: false, follow: false }
       : { index: true, follow: true },
     openGraph: {
-      title: pageData.title,
+      title,
       description,
       url: canonical,
       siteName,
@@ -50,7 +57,7 @@ export function createPageMetadata(pageData: PageData): Metadata {
     },
     twitter: {
       card: "summary_large_image",
-      title: pageData.title,
+      title,
       description,
       images: [socialImage],
     },

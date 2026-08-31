@@ -40,6 +40,7 @@ export default async function DynamicPage({ params }: PageProps) {
       <PageRenderer
         bodyHtml={pageData.bodyHtml}
         bodyClass={pageData.bodyClass}
+        seoContentHtml={pageData.seoContentHtml}
       />
     </>
   );
