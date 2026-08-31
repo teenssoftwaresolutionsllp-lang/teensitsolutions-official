@@ -36,3 +36,78 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 Whenever you push something run this command:
 npx vercel --prod
+
+The installation **succeeded**. The problem is that PowerShell has not found the npm global binary folder in your **PATH** yet.
+
+First, **close this PowerShell window completely**, open a **new PowerShell**, and run:
+
+```powershell
+vercel --version
+```
+
+If it still says not recognized, run:
+
+```powershell
+npx vercel --version
+```
+
+Then you can log in using:
+
+```powershell
+npx vercel login
+```
+
+For your current project, you can actually use `npx` for everything without fixing PATH:
+
+```powershell
+npx vercel login
+```
+
+Then:
+
+```powershell
+npx vercel
+```
+
+### Your first deployment
+
+When it asks:
+
+```text
+Set up and deploy? → Y
+Which scope? → select prolicious-team
+Link to existing project? → 
+```
+
+* Select **YES** if your Vercel project already exists under `prolicious-team`
+* Select **NO** if you want this command to create the Vercel project
+
+Then for future production updates:
+
+```powershell
+npx vercel --prod
+```
+
+### If you want to fix `vercel` permanently
+
+Run:
+
+```powershell
+npm config get prefix
+```
+
+Copy the result. Then add that directory to your Windows **User PATH**, restart PowerShell, and:
+
+```powershell
+vercel
+```
+
+should work directly.
+
+**For now, don't waste time fixing PATH. Just run:**
+
+```powershell
+npx vercel login
+```
+
+and continue.
