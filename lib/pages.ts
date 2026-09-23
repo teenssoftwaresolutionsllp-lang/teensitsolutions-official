@@ -62,7 +62,18 @@ export function getPageData(route: string): PageData | null {
     );
     if (!fs.existsSync(filePath)) return null;
     const content = fs.readFileSync(filePath, "utf-8");
-    return JSON.parse(content);
+    const pageData = JSON.parse(content) as PageData;
+    const seoContent = getSeoPageContent(route);
+
+    return seoContent
+      ? {
+          ...pageData,
+          metaTitle: seoContent.metaTitle,
+          metaDescription: seoContent.metaDescription,
+          focusKeyword: seoContent.focusKeyword,
+          seoContentHtml: seoContent.contentHtml,
+        }
+      : pageData;
   } catch (err) {
     console.error(`Error reading page data for route ${route}:`, err);
     return null;
