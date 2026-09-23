@@ -38,7 +38,19 @@ export default function HeadStyles({ pageData }: { pageData: PageData }) {
     ];
   });
 
-  return <>{styleNodes}</>;
+  return (
+    <>
+      {pageData.route === "/" && (
+        <link
+          rel="preload"
+          as="image"
+          href="/wp-content/uploads/2024/02/h2-bg-slider222.jpg"
+          fetchPriority="high"
+        />
+      )}
+      {styleNodes}
+    </>
+  );
 }
 
 function getAttribute(attributes: string, name: string): string | null {
