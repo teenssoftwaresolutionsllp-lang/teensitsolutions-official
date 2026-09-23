@@ -97,12 +97,17 @@ export default function PageRenderer({
     });
   }, [bodyHtml, bodyClass]);
 
+  const localAssetHtml = bodyHtml.replace(
+    /(?:https?:)?\/\/(?:www\.)?teensitsolutions\.com\/wp-content\//g,
+    "/wp-content/",
+  );
+
   const renderedHtml = seoContentHtml
-    ? bodyHtml.replace(
+    ? localAssetHtml.replace(
         '<div id="content"',
         `<section class="seo-content" aria-label="Page information">${seoContentHtml}</section><div id="content"`,
       )
-    : bodyHtml;
+    : localAssetHtml;
 
   return (
     <div
