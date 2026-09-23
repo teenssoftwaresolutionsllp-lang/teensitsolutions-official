@@ -10,9 +10,7 @@ function getDescription(pageData: PageData): string {
   if (pageData.metaDescription?.trim()) {
     return pageData.metaDescription.trim();
   }
-
   if (pageData.description.trim()) return pageData.description.trim();
-
   const pageName = pageData.title
     .replace(/\s*[–-]\s*Teens Software Solutions\s*$/i, "")
     .trim();

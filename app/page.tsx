@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getPageData } from "@/lib/pages";
 import { createPageMetadata } from "@/lib/metadata";
 import HeadInjector from "@/components/HeadInjector";
+import HeadStyles from "@/components/HeadStyles";
 import PageRenderer from "@/components/PageRenderer";
 import { notFound } from "next/navigation";
 
@@ -20,6 +21,7 @@ export default async function HomePage() {
 
   return (
     <>
+      <HeadStyles pageData={pageData} />
       <HeadInjector pageData={pageData} />
       <PageRenderer
         bodyHtml={pageData.bodyHtml}

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     locale: "en_US",
   },
   icons: {
-    icon: "/wp-content/uploads/2021/09/TEENS-LOGO-new.png",
+    icon: "/ts.jpeg",
   },
 };
 

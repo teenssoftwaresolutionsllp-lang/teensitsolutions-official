@@ -7,42 +7,43 @@ import type { PageData } from "@/lib/pages";
 export default function HeadStyles({ pageData }: { pageData: PageData }) {
   if (!pageData.headStyles || pageData.headStyles.length === 0) return null;
 
-  // Separate CSS (links + styles) from scripts
-  const cssTags: string[] = [];
-  const scriptTags: string[] = [];
+  const styleNodes = pageData.headStyles.flatMap((tag, index) => {
+    const linkMatch = tag.match(/^\s*<link\s+([^>]+)>/i);
+    if (linkMatch) {
+      const rel = getAttribute(linkMatch[1], "rel");
+      const href = getAttribute(linkMatch[1], "href");
+      if (!href || !rel) return [];
 
-  for (const tag of pageData.headStyles) {
-    if (tag.trimStart().startsWith("<script")) {
-      scriptTags.push(tag);
-    } else {
-      cssTags.push(tag);
+      return [
+        <link
+          key={`${index}-${href}`}
+          rel={rel}
+          href={href}
+          type={getAttribute(linkMatch[1], "type") || undefined}
+          media={getAttribute(linkMatch[1], "media") || undefined}
+        />,
+      ];
     }
-  }
 
-  // Join all CSS tags into one string for server-side rendering in <head>
-  const cssHtml = cssTags.join("\n");
+    const styleMatch = tag.match(
+      /^\s*<style(?:\s[^>]*)?>([\s\S]*?)<\/style>\s*$/i,
+    );
+    if (!styleMatch) return [];
 
-  // Join head script tags - these contain config vars needed by body scripts
-  const scriptHtml = scriptTags.join("\n");
+    return [
+      <style
+        key={`${index}-style`}
+        dangerouslySetInnerHTML={{ __html: styleMatch[1] }}
+      />,
+    ];
+  });
 
-  return (
-    <>
-      <head>
-        {/* Render all CSS links and inline styles server-side */}
-        <ServerStyles html={cssHtml} />
-        {/* Render head config scripts server-side */}
-        {scriptHtml && <ServerStyles html={scriptHtml} />}
-      </head>
-    </>
-  );
+  return <>{styleNodes}</>;
 }
 
-function ServerStyles({ html }: { html: string }) {
-  return (
-    <div
-      dangerouslySetInnerHTML={{ __html: html }}
-      suppressHydrationWarning
-      style={{ display: "none" }}
-    />
+function getAttribute(attributes: string, name: string): string | null {
+  const match = attributes.match(
+    new RegExp(`${name}=["']([^"']*)["']`, "i"),
   );
+  return match?.[1] ?? null;
 }

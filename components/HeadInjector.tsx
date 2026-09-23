@@ -57,18 +57,6 @@ export default function HeadInjector({ pageData }: { pageData: PageData }) {
       }
     };
 
-    for (const node of nodes) {
-      if (node.tagName.toLowerCase() === "script") continue;
-      const asset = document.head.querySelector(
-        `[data-exported-asset="${CSS.escape(node.outerHTML)}"]`,
-      );
-      if (asset) continue;
-      const clone = node.cloneNode(true) as HTMLElement;
-      clone.setAttribute("data-exported-asset", node.outerHTML);
-      document.head.appendChild(clone);
-      addedNodes.push(clone);
-    }
-
     window.__headAssetsReady = loadScripts();
 
     return () => {
