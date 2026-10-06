@@ -8,7 +8,7 @@ interface PageRendererProps {
   seoContentHtml?: string;
 }
 
-const newClientSlides = [
+const newClientSlides: { name: string; detail: string; image?: string }[] = [
   { name: "Diya soaps", detail: "", image: "/diya.png" },
   { name: "Meat In Minutes", detail: "meat delivery app" },
   { name: "Treeko", detail: "Casting app", image: "/image%20(2).jpg" },
