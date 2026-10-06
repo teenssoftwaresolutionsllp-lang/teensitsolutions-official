@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en-US" className="no-js">
+    <html lang="en-US" className="no-js" suppressHydrationWarning>
       <head>
         <meta charSet="UTF-8" />
         <meta
@@ -69,7 +69,7 @@ fbq('init', '924956710682252');
 fbq('track', 'PageView');`}
         </Script>
       </head>
-      <body>
+      <body suppressHydrationWarning>
         {children}
         <noscript>
           <img

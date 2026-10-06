@@ -8,6 +8,53 @@ interface PageRendererProps {
   seoContentHtml?: string;
 }
 
+const newClientSlides = [
+  { name: "Diya soaps", detail: "", image: "/diya.png" },
+  { name: "Meat In Minutes", detail: "meat delivery app" },
+  { name: "Treeko", detail: "Casting app", image: "/image%20(2).jpg" },
+  { name: "VNR Infra", detail: "real estate website" },
+  { name: "WINC", detail: "Lottery based SaaS" },
+] as const;
+
+function addNewClientSlides(root: HTMLElement) {
+  const clientsHeading = Array.from(root.querySelectorAll(".ct-text-inner")).find(
+    (heading) => heading.textContent?.trim() === "Our Clients",
+  );
+  const clientsWidgetWrap = clientsHeading?.closest(".elementor-widget-wrap");
+  const carousel = clientsWidgetWrap?.querySelector(
+    ".ct-client-carousel1 .ct-slick-carousel",
+  ) as HTMLElement | null;
+
+  if (!carousel || carousel.dataset.clientListAdded === "true") return;
+
+  const slideMarkup = newClientSlides
+    .map(
+      ({ name, detail, image }) => `
+          <div class="slick-slide">
+            <div class="ct-client--image ">
+              <a href="#" style="display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:90px; font-weight:700; color:#0f2a4d; text-decoration:none; font-size:18px; letter-spacing:0.02em; text-align:center; line-height:1.2;">
+                ${image ? `<img src="${image}" alt="${name}" style="display:block; width:auto; max-width:100%; height:84px; object-fit:contain;" />` : ""}
+                <span>
+                  <span style="display:block;">${name}</span>
+                  ${detail ? `<small style="display:block; font-size:11px; font-weight:600; opacity:0.85;">${detail}</small>` : ""}
+                </span>
+              </a>
+            </div>
+          </div>
+        `,
+    )
+    .join("");
+
+  const temp = document.createElement("div");
+  temp.innerHTML = slideMarkup;
+
+  Array.from(temp.children).forEach((node) => {
+    carousel.appendChild(node);
+  });
+
+  carousel.dataset.clientListAdded = "true";
+}
+
 export default function PageRenderer({
   bodyHtml,
   bodyClass,
@@ -37,12 +84,14 @@ export default function PageRenderer({
     };
     hidePreloader();
 
+    const container = containerRef.current;
+    if (!container) return;
+
+    addNewClientSlides(container);
+
     // 3. Execute body scripts sequentially
     if (scriptsRan.current) return;
     scriptsRan.current = true;
-
-    const container = containerRef.current;
-    if (!container) return;
 
     const runScripts = async () => {
       await (window as any).__headAssetsReady;
